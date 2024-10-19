@@ -1,0 +1,12 @@
+html{
+    --primary-color: MediumBlue;
+    --primary-background-color: rgba(245, 245, 245, 0.99);
+
+    --shadow-color: gray;
+    //&[mode=blue]{
+    //    --primary-color: blue;
+    //}
+    //&[mode=violet]{
+    //    --primary-color: mediumVioletRed;
+    //}
+}

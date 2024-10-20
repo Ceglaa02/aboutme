@@ -54,10 +54,13 @@ table {
 
 html {
   --primary-color: #8100ff;
-  --primary-background-color: rgba(245, 245, 245, 0.99);
   --secondary-color: #068ded;
+  --primary-background-color: rgba(245, 245, 245, 0.99);
   --text-color: black;
   --alt-text-color: white;
+}
+html[mode=dark] {
+  --primary-background-color: rgb(11 11 11);
 }
 
 @keyframes typing {

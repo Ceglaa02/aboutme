@@ -1,6 +1,21 @@
 @use "./components/reset";
 @use "./components/colors";
+@use "./components/animations";
+@use "./components/header";
 @use "./components/navbar";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
 
 .logo{
   width: 40px;

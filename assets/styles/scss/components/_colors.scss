@@ -1,8 +1,11 @@
 html{
-    --primary-color: MediumBlue;
+    --primary-color: #8100ff;
     --primary-background-color: rgba(245, 245, 245, 0.99);
 
-    --shadow-color: gray;
+    --secondary-color: #068ded;
+
+    --text-color: black;
+    --alt-text-color: white;
     //&[mode=blue]{
     //    --primary-color: blue;
     //}

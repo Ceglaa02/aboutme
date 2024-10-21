@@ -57,12 +57,35 @@ html {
   --secondary-color: #068ded;
   --primary-background-color: rgba(245, 245, 245, 0.99);
   --secondary-bacground-color: white;
-  --text-color: black;
+  --alt-background-color: black;
   --alt-text-color: white;
+  --text-color: black;
+  --shadow-color: black;
 }
 html[mode=dark] {
   --primary-background-color: rgb(11 11 11);
   --secondary-bacground-color: black;
+  --shadow-color: white;
+  --alt-background-color: white;
+  --alt-text-color: black;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bolder;
+  cursor: pointer;
+  padding: 0.55rem 0.6rem;
+  color: var(--alt-text-color);
+  background-color: var(--alt-background-color);
+  transition: background-color 0.3s linear, box-shadow 0.3s linear, color 0.3s linear;
+}
+.btn:hover {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 6px var(--primary-color);
+  color: white;
 }
 
 @keyframes typing {
@@ -112,7 +135,7 @@ html[mode=dark] {
 .hero .hero-text {
   font-size: 14px;
   font-weight: bold;
-  color: var(--alt-text-color);
+  color: white;
   border-right: 2px solid;
   white-space: nowrap;
   overflow: hidden;
@@ -142,11 +165,17 @@ html[mode=dark] {
 }
 
 .nav {
+  display: flex;
+  align-items: center;
   width: 100%;
   padding: 1rem;
   box-shadow: 0 2px 6px var(--primary-color);
   background-color: var(--primary-background-color);
   color: var(--primary-color);
+}
+
+.first-nav-item {
+  margin-right: auto;
 }
 
 * {

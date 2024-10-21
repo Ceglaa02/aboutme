@@ -5,10 +5,20 @@ html{
     --primary-background-color: rgba(245, 245, 245, 0.99);
     --secondary-bacground-color: white;
 
-    --text-color: black;
+    --alt-background-color: black;
     --alt-text-color: white;
+
+    --text-color: black;
+
+    --shadow-color: black;
+
     &[mode=dark]{
         --primary-background-color: rgb(11 11 11);
         --secondary-bacground-color: black;
+
+        --shadow-color: white;
+
+        --alt-background-color: white;
+        --alt-text-color: black;
     }
 }

@@ -1,0 +1,22 @@
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-weight: bolder;
+    cursor: pointer;
+
+    padding: .55rem .6rem;
+
+    color: var(--alt-text-color);
+    background-color: var(--alt-background-color);
+
+    transition: background-color .3s linear, box-shadow .3s linear, color .3s linear;
+
+    &:hover{
+        background-color: var(--primary-color);
+        box-shadow: 0 0 6px var(--primary-color);
+        color: white;
+    }
+}

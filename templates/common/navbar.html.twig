@@ -1,5 +1,12 @@
 <nav class="nav">
-    <div class="nav-item">
+    <div class="nav-item first-nav-item">
         <img class="logo" src="{{ asset('images/logo.png') }}" alt="ikonka programowania">
+    </div>
+    <div class="nav-item">
+        {% if userIsLoggedIn == false %}
+            <a class="btn" href="/login">Zaloguj się</a>
+        {% else %}
+            <a class="btn" href="/logout">Wyloguj się</a>
+        {% endif %}
     </div>
 </nav>

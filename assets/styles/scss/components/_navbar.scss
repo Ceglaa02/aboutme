@@ -1,4 +1,6 @@
 .nav{
+    display: flex;
+    align-items: center;
     width: 100%;
 
     padding: 1rem;
@@ -7,4 +9,8 @@
 
     background-color: var(--primary-background-color);
     color: var(--primary-color);
+}
+
+.first-nav-item{
+    margin-right: auto;
 }

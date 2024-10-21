@@ -1,5 +1,5 @@
 <nav class="nav">
-    <div class="nav-item first-nav-item">
+    <div class="nav-item-first-item mr-auto">
         <img class="logo" src="{{ asset('images/logo.png') }}" alt="ikonka programowania">
     </div>
     <div class="nav-item">
@@ -8,5 +8,10 @@
         {% else %}
             <a class="btn" href="/logout">Wyloguj się</a>
         {% endif %}
+    </div>
+    <div class="nav-item-min">
+        <button type="button" class="i-btn">
+            <i class="bi bi-list"></i>
+        </button>
     </div>
 </nav>

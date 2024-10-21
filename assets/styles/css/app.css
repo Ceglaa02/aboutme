@@ -68,6 +68,7 @@ html[mode=dark] {
   --shadow-color: white;
   --alt-background-color: white;
   --alt-text-color: black;
+  --text-color: white;
 }
 
 .mr-auto {
@@ -180,6 +181,7 @@ html[mode=dark] {
   font-weight: bolder;
   cursor: pointer;
   padding: 0.55rem 0.6rem;
+  border: none;
   color: var(--alt-text-color);
   background-color: var(--alt-background-color);
   transition: background-color 0.3s linear, box-shadow 0.3s linear, color 0.3s linear;
@@ -198,6 +200,14 @@ html[mode=dark] {
   cursor: pointer;
   padding: 0.55rem 0.6rem;
   border: none;
+}
+
+.form-control {
+  color: var(--text-color);
+  background-color: var(--primary-background-color);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
 }
 
 @keyframes typing {
@@ -347,6 +357,8 @@ html[mode=dark] {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--secondary-bacground-color);
   width: 100%;
 }

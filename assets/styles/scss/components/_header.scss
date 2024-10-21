@@ -34,7 +34,9 @@
         white-space: nowrap;
         overflow: hidden;
 
-        animation: typing 8s steps(40) 1s infinite alternate, blink-caret 0.75s step-end infinite;
+        animation: typing 8s steps(34) 1s infinite alternate, blink-caret 0.75s step-end infinite;
+
+        transform: translateZ(0);
 
 
         @media (min-width: 576px) {

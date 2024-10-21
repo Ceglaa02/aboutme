@@ -3,10 +3,12 @@ html{
     --secondary-color: #068ded;
 
     --primary-background-color: rgba(245, 245, 245, 0.99);
+    --secondary-bacground-color: white;
 
     --text-color: black;
     --alt-text-color: white;
     &[mode=dark]{
         --primary-background-color: rgb(11 11 11);
+        --secondary-bacground-color: black;
     }
 }

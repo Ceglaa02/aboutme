@@ -15,7 +15,7 @@
 .nav-item{
     display: none;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
         display: flex;
     }
 }
@@ -23,7 +23,7 @@
 .nav-item-min{
     display: flex;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
         display: none;
     }
 }
@@ -64,7 +64,7 @@
 
     background-color: var(--secondary-bacground-color);
 
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
         display: none;
     }
 }

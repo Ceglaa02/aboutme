@@ -74,6 +74,104 @@ html[mode=dark] {
   margin-right: auto;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.mx-1 {
+  margin: 0 0.5rem;
+}
+
+.mx-2 {
+  margin: 0 1rem;
+}
+
+.mx-3 {
+  margin: 0 1.5rem;
+}
+
+.mx-4 {
+  margin: 0 2rem;
+}
+
+.my-1 {
+  margin: 0.5rem 0;
+}
+
+.my-2 {
+  margin: 1rem 0;
+}
+
+.my-3 {
+  margin: 1.5rem 0;
+}
+
+.my-4 {
+  margin: 2rem 0;
+}
+
+.mr-1 {
+  margin-right: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 1rem;
+}
+
+.mr-3 {
+  margin-right: 1.5rem;
+}
+
+.mr-4 {
+  margin-right: 2rem;
+}
+
+.ml-1 {
+  margin-left: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 1rem;
+}
+
+.ml-3 {
+  margin-left: 1.5rem;
+}
+
+.ml-4 {
+  margin-left: 2rem;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+@media (min-width: 992px) {
+  .mt-lg-0 {
+    margin-top: 0;
+  }
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -192,7 +290,7 @@ html[mode=dark] {
 .nav-item {
   display: none;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .nav-item {
     display: flex;
   }
@@ -201,7 +299,7 @@ html[mode=dark] {
 .nav-item-min {
   display: flex;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .nav-item-min {
     display: none;
   }
@@ -234,7 +332,7 @@ html[mode=dark] {
   font-size: 30px;
   margin: 0 0.5rem;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .mini-menu {
     display: none;
   }

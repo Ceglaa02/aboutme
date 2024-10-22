@@ -5,31 +5,40 @@
     <link rel="stylesheet" href="{{ asset('styles/login.min.css') }}">
 </head>
 <body>
-{% if error %}
-    <section name="alert" class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</section>
-{% endif %}
-{% if app.user %}
-    <section name="user-info" class="">
-        Jesteś zalogowany jako {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Wyloguj się</a>
-    </section>
-{% endif %}
-
 <section class="login-form">
     <section name="header-container" class="header-container my-2">
         <h1 class="h1">Zaloguj się</h1>
     </section>
+    {% if error %}
+        <section name="alert" class="alert-danger">
+            <span class="h2">{{ error}} <i class="bi bi-exclamation-triangle"></i></span>
+        </section>
+    {% endif %}
+    {% if app.user %}
+        <section name="user-info" class="alert-info">
+            <span>Jesteś zalogowany jako {{ app.user.userIdentifier }}</span>
+        </section>
+    {% endif %}
     <form method="post" name="login-form" class="form-container">
         <label class="my-1" for="username">Email</label>
-        <input class="my-1 form-control" type="email" value="{{ last_username }}" name="_username" id="username"
+        <input class="my-1 form-control {% if error != '' %} invalid {% endif %}" type="email" value="{{ last_username }}" name="_username" id="username"
                autocomplete="email" required autofocus>
         <label class="my-1" for="password">Password</label>
-        <input type="password" name="_password" id="password" class="my-1 form-control" autocomplete="current-password" required>
+        <input type="password" name="_password" id="password"
+               class="my-1 form-control {% if error != '' %} invalid {% endif %}"
+               {% if app.user %} value="{{ app.user.userIdentifier }}"{% endif %}
+               autocomplete="current-password" required>
         <input type="hidden" name="_csrf_token"
                value="{{ csrf_token('authenticate') }}"
         >
-        <button class="btn my-1" type="submit">
-            Zaloguj się
-        </button>
+        <section name="btn-groups" class="btn-groups">
+            <button class="btn my-1 white-shadow mr-1" type="submit">
+                Zaloguj się
+            </button>
+            <a class="btn my-1 white-shadow" href="/register">
+                Zarejestruj się
+            </a>
+        </section>
     </form>
 </section>
 </body>

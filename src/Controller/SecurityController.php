@@ -17,11 +17,11 @@ class SecurityController extends AbstractController
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-        $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render('security/login.html.twig', [
-            'error' => $error,
+            'error' =>
+                !empty($authenticationUtils->getLastAuthenticationError()) ? 'Niepoprawny email lub hasło' : '',
             'last_username' => $lastUsername,
         ]);
     }
@@ -47,7 +47,7 @@ class SecurityController extends AbstractController
         $userIsRegistered = $userProvider->register($request, $passwordHasher, $entityManager);
 
         if ($userIsRegistered === false) {
-            $this->addFlash('error', 'Passwords do not match.');
+            $this->addFlash('error', 'Hasła nie są takie same.');
             return $this->redirectToRoute('app_register');
         } else{
             return $this->redirectToRoute('app_login');

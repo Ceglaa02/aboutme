@@ -1,4 +1,5 @@
 .login-form {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,6 +10,9 @@
   margin: 0 1rem;
   box-shadow: 0 0 6px white;
 }
+.login-form > * {
+  z-index: 2;
+}
 @media (min-width: 576px) {
   .login-form {
     max-width: 500px;
@@ -18,6 +22,16 @@
   .login-form {
     max-width: 600px;
   }
+}
+
+.login-form::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.65;
 }
 
 body {
@@ -54,10 +68,6 @@ body {
   justify-content: center;
   align-items: start;
   flex-direction: column;
-}
-.form-container button[type=submit] {
-  margin-left: 50%;
-  transform: translateX(-50%);
 }
 .form-container label {
   font-size: 16px;

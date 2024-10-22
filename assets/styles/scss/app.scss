@@ -27,3 +27,17 @@ body{
 .logo{
   width: 40px;
 }
+
+.white-shadow{
+    box-shadow: 0 0 6px white;
+}
+
+.alert-danger{
+    color: var(--danger-color);
+    text-shadow: 0 0 6px var(--danger-color);
+}
+
+.alert-info{
+    color: var(--primary-color);
+    text-shadow: 0 0 6px var(--primary-color);
+}

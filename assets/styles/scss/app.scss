@@ -42,23 +42,23 @@ body{
     text-shadow: 0 0 6px var(--primary-color);
 }
 
-//.primary-color{
-//    color:var(--primary-color);
-//}
-//
-//.bolder{
-//    font-weight: bolder;
-//}
-//.box{
-//    display: flex;
-//    flex-direction: column;
-//    padding: .25rem;
-//
-//    color: white;
-//
-//    z-index: 2;
-//}
-//
-//.h1{
-//    font-size: 26px;
-//}
+.primary-color{
+    color:var(--primary-color);
+}
+
+.bolder{
+    font-weight: bolder;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    padding: .25rem;
+
+    color: white;
+
+    z-index: 2;
+}
+
+.h1{
+    font-size: 26px;
+}

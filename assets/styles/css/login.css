@@ -48,17 +48,17 @@ body {
   font-weight: bolder;
 }
 
-.header-container, .form-container {
+.header-container, .form-container-login {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   background-color: inherit;
 }
-.header-container label, .form-container label {
+.header-container label, .form-container-login label {
   color: white;
 }
-.header-container input, .form-container input {
+.header-container input, .form-container-login input {
   display: flex;
   width: 100%;
 }

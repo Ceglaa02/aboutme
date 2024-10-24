@@ -14,6 +14,10 @@ class UserProvider
 
     public function register($request, $passwordHasher, $entityManager): bool{
         $email = $request->request->get('email');
+        $name = $request->request->get('name');
+        $surname = $request->request->get('surname');
+
+
         $plainPassword = $request->request->get('plainPassword');
         $passwordRepeat = $request->request->get('passwordRepeat');
 
@@ -23,6 +27,8 @@ class UserProvider
 
         $user = new User();
         $user->setEmail($email);
+        $user->setName($name);
+        $user->setSurname($surname);
 
         $hashedPassword = $passwordHasher->hashPassword($user, $plainPassword);
         $user->setPassword($hashedPassword);

@@ -24,6 +24,14 @@
         </div>
     {% endfor %}
     <form method="post" action="{{ path('app_register') }}" name="login-form" class="form-container">
+        <label for="name" class="my-1">Imię:</label>
+        <input id="name" name="name"
+               class="my-1 form-control {% if error %} invalid {% endif %}" required>
+
+        <label for="surname" class="my-1">Nazwisko:</label>
+        <input id="surname" name="surname"
+               class="my-1 form-control {% if error %} invalid {% endif %}" required>
+
         <label for="email" class="my-1">Email:</label>
         <input type="email" id="email" name="email"
                class="my-1 form-control {% if error %} invalid {% endif %}" required>
@@ -38,7 +46,7 @@
 
         <section name="btn-groups" class="btn-groups">
             <button class="btn my-1 white-shadow mr-1" type="submit">
-                Wyślij
+                Zapisz
             </button>
         </section>
     </form>

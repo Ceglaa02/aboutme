@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
 {
-    #[Route('/profile', name: 'app_profile')]
+    #[Route('/account', name: 'app_account')]
     public function profile(): Response
     {
         $user = $this->getUser();

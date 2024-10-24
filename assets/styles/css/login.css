@@ -63,17 +63,17 @@ body {
   width: 100%;
 }
 
-.form-container {
+.form-container-login {
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
 }
-.form-container label {
+.form-container-login label {
   font-size: 16px;
 }
 
-.form-control {
+.form-control-login {
   box-shadow: 0 0 6px white;
 }
 

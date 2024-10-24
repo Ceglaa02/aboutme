@@ -19,13 +19,13 @@
             <span>Jesteś zalogowany jako {{ app.user.userIdentifier }}</span>
         </section>
     {% endif %}
-    <form method="post" name="login-form" class="form-container">
+    <form method="post" name="login-form" class="form-container-login">
         <label class="my-1" for="username">Email</label>
-        <input class="my-1 form-control {% if error != '' %} invalid {% endif %}" type="email" value="{{ last_username }}" name="_username" id="username"
+        <input class="my-1 form-control-login {% if error != '' %} invalid {% endif %}" type="email" value="{{ last_username }}" name="_username" id="username"
                autocomplete="email" required autofocus>
         <label class="my-1" for="password">Hasło</label>
         <input type="password" name="_password" id="password"
-               class="my-1 form-control {% if error != '' %} invalid {% endif %}"
+               class="my-1 form-control-login {% if error != '' %} invalid {% endif %}"
                {% if app.user %} value="{{ app.user.userIdentifier }}"{% endif %}
                autocomplete="current-password" required>
         <input type="hidden" name="_csrf_token"

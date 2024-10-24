@@ -8,7 +8,11 @@
         </div>
     {% else %}
         <div class="nav-item">
-            <a href="/profile" class="btn">Konto</a>
+            {% if (account is not defined) %}
+            <a href="/account" class="btn">Konto</a>
+            {% else %}
+            <a href="/" class="btn">Strona główna</a>
+            {% endif %}
         </div>
         <div class="nav-item ml-1 mt-1 mt-lg-0">
             <a class="btn" href="/logout">Wyloguj się</a>

@@ -16,7 +16,7 @@
       <option name="outputFromStdout" value="false" />
       <option name="program" value="sass" />
       <option name="runOnExternalChanges" value="true" />
-      <option name="scopeName" value="scss" />
+      <option name="scopeName" value="SCSS" />
       <option name="trackOnlyRoot" value="true" />
       <option name="workingDir" value="$FileDir$" />
       <envs />
@@ -36,7 +36,7 @@
       <option name="outputFromStdout" value="false" />
       <option name="program" value="cleancss" />
       <option name="runOnExternalChanges" value="true" />
-      <option name="scopeName" value="css" />
+      <option name="scopeName" value="CSS" />
       <option name="trackOnlyRoot" value="false" />
       <option name="workingDir" value="" />
       <envs />
@@ -56,7 +56,7 @@
       <option name="outputFromStdout" value="false" />
       <option name="program" value="uglifyjs" />
       <option name="runOnExternalChanges" value="true" />
-      <option name="scopeName" value="assetsjs" />
+      <option name="scopeName" value="JS" />
       <option name="trackOnlyRoot" value="true" />
       <option name="workingDir" value="$FileDir$" />
       <envs />

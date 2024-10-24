@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pl" mode="">
+<head>
+    {% include './common/head.html.twig' %}
+    <link href="{{ asset('styles/account.min.css') }}" rel="stylesheet"/>
+</head>
+<body>
+{% include './common/navbar.html.twig' with { 'account':true } %}
+
+<form class="form mt-2" action="/account/save" method="post">
+    <section name="data" class="form-container mr-1">
+        <div class="box">
+            <h3 class="h1"><span class="bolder">Witaj</span> {{ user.name }} {{ user.surname }}</h3>
+        </div>
+        <div class="box mt-1">
+            <label for="name">Imię: </label>
+            <div class="input-container">
+                <input class="form-control-alt" type="text" name="name" id="name" value="{{ user.name }}" disabled/>
+                <button type="button" class="btn" aria-controls="name"><i class="bi bi-lock-fill"></i></button>
+            </div>
+        </div>
+        <div class="box">
+            <label for="surname">Nazwisko: </label>
+            <div class="input-container">
+                <input class="form-control-alt" type="text" name="surname" id="surname" value="{{ user.surname }}"
+                       disabled/>
+                <button type="button" class="btn" aria-controls="surname"><i class="bi bi-lock-fill"></i></button>
+            </div>
+        </div>
+        <div class="box">
+            <label for="email">Email: </label>
+            <div class="input-container">
+                <input type="email" class="form-control-alt" name="email" id="email" value="{{ user.email }}" disabled/>
+                <button type="button" class="btn" aria-controls="email"><i class="bi bi-lock-fill"></i></button>
+            </div>
+        </div>
+    </section>
+    <section name="settings" class="form-container"></section>
+</form>
+{% include './common/scripts.html.twig' %}
+<script type="text/javascript" src="{{ asset('js/account.min.js') }}"></script>
+</body>
+</html>
